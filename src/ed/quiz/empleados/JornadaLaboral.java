@@ -18,17 +18,19 @@ public class JornadaLaboral {
 	
 	public void ingresarInformacion(int tamanoMuestra) {
 		// Las filas corresponden a la cantidad de empleados, 
-		// y eso corresponde al tamaño de la muestra.
+		// y eso corresponde al tamaï¿½o de la muestra.
 		// Las columnas no pueden cambiar porque son fijas.
 		horasLaboradas = new int[tamanoMuestra][8];
 		
 		for(int i=0;i<horasLaboradas.length;i++) {
 			
-			String tipoEmpleado = JOptionPane.showInputDialog("Ingrese el tipo de empleado (1-Directivo, 2-Jefe Área, 3-Analista): ");
+			String tipoEmpleado = JOptionPane.showInputDialog("Ingrese el "
+					+ "tipo de empleado (1-Directivo, 2-Jefe ï¿½rea, 3-Analista): ");
 			horasLaboradas[i][0] = Integer.parseInt(tipoEmpleado);
 						
 			for(int j=1;j<horasLaboradas[i].length;j++) {
-				String horas = JOptionPane.showInputDialog("Ingrese la cantidad de horas trabajadas: ");
+				String horas = JOptionPane.showInputDialog("Ingrese la "
+						+ "cantidad de horas trabajadas: ");
 				horasLaboradas[i][j] = Integer.parseInt(horas);
 			}
 		}
@@ -44,12 +46,12 @@ public class JornadaLaboral {
 	
 	public double calcularPromedioHorasTrabajadas(String diaSemana, int tipoEmpleado) {
 		
-		for(int i=0;i<horasLaboradas.length;i++) {
-			for(int j=0;j<horasLaboradas[i].length;j++) {
-				System.out.print(horasLaboradas[i][j]+" ");
-			}
-			System.out.println();
-		}
+//		for(int i=0;i<horasLaboradas.length;i++) {
+//			for(int j=0;j<horasLaboradas[i].length;j++) {
+//				System.out.print(horasLaboradas[i][j]+" ");
+//			}
+//			System.out.println();
+//		}
 		
 		int columnaDiaSemana = 0;
 		switch (diaSemana) {
@@ -97,7 +99,7 @@ public class JornadaLaboral {
 	}
 	
 	/**
-	 * Método bono
+	 * Mï¿½todo bono
 	 * @param diaSemana
 	 * @param tipoEmpleado
 	 * @return
@@ -107,7 +109,7 @@ public class JornadaLaboral {
 	}
 	
 	/**
-	 * Método bono
+	 * Mï¿½todo bono
 	 * @param diaSemana
 	 * @param tipoEmpleado
 	 * @return
